@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3eee5">
+  <title>DealIX — Spend with clarity</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="DealIX home"><span class="brand-mark">d.</span><span>dealix</span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#afford-form">Affordability check</a></nav>
+    <div class="topbar-right"><span class="privacy"><span class="live-dot"></span> Your money stays yours</span><a class="nav-cta" href="#afford-form">Make a money move <span>↗</span></a></div>
+  </header>
+  <main class="page-shell">
+    <section class="hero" id="how-it-works">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="spark">✳</span> A LITTLE MORE CLARITY. A LOT MORE CONFIDENCE.</div>
+        <h1>Make room<br>for <em>what</em><br><em>matters.</em></h1>
+        <p>Big purchase on your mind? See how it fits your whole financial picture before you make the move.</p>
+        <a class="hero-cta" href="#afford-form">Find your comfort zone <span>↓</span></a>
+        <div class="hero-footnote"><span class="avatars"><i>A</i><i>M</i><i>J</i></span><span>Thoughtful money decisions, made personal.</span></div>
+      </div>
+      <div class="hero-art" aria-label="An illustration of money set aside for future plans">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="sun-disc"></div><div class="art-glow"></div>
+        <div class="floating-chip chip-top"><span class="chip-dot"></span> YOUR SAFETY NET <b>INTACT</b></div>
+        <div class="floating-chip chip-bottom"><span class="chip-symbol">↗</span><span><small>YOUR NEXT MOVE</small><b>Feels like you.</b></span></div>
+        <div class="reserve-object"><div class="object-shine"></div><div class="object-cap"></div><div class="object-neck"></div><div class="object-body"><span class="object-brand">d<span>.</span></span><span class="object-line"></span><span class="object-label">ROOM FOR<br>WHAT MATTERS</span><span class="object-wave wave-a"></span><span class="object-wave wave-b"></span><span class="object-wave wave-c"></span></div></div>
+        <div class="art-caption"><span>01 / YOUR MONEY, IN CONTEXT</span><span>BUILT AROUND YOU</span></div>
+      </div>
+    </section>
+    <section class="story-strip"><span>MORE THAN YOUR BALANCE</span><i></i><span>BUILT AROUND YOUR REAL LIFE</span><i></i><span>YOUR PACE. YOUR PRIORITIES.</span></section>
+    <section class="planner-intro"><span class="section-kicker">YOUR NEXT MONEY MOVE</span><h2>Let’s make a plan that <em>feels right.</em></h2><p>A little context makes for a much more personal answer.</p></section>
+    <section class="planner-layout">
+      <aside class="planner-aside"><div class="aside-marker">✳ &nbsp; YOUR MONEY, WITH CONTEXT</div><h3>More than<br>a yes or no.</h3><p>We look at what’s coming in, what’s going out, and what you want to protect.</p><ul><li><span>01</span> Essentials stay covered</li><li><span>02</span> Every payment gets forecast</li><li><span>03</span> Your comfort sets the pace</li></ul><div class="aside-note"><span>✦</span> Your reserve stays yours. Always.</div></aside>
+
+    <section class="workspace" aria-label="Affordability planner">
+      <div class="stepper"><span class="step active"><b>1</b> Your finances</span><i></i><span class="step"><b>2</b> The purchase</span><i></i><span class="step"><b>3</b> Your plan</span></div>
+      <form id="afford-form">
+        <section class="form-section">
+          <div class="section-heading"><div><span class="section-kicker">YOUR STARTING POINT</span><h2>Your money picture</h2></div><span class="section-icon">◉</span></div>
+          <div class="field-grid three">
+            <label>Current balance <span class="input-wrap"><span class="currency">$</span><input name="balance" type="number" min="0" step="0.01" value="60000" required></span></label>
+            <label>Monthly take-home <span class="input-wrap"><span class="currency">$</span><input name="income" type="number" min="0" step="0.01" value="60000" required></span></label>
+            <label>Monthly recurring bills <span class="input-wrap"><span class="currency">$</span><input name="recurring" type="number" min="0" step="0.01" value="20000" required></span></label>
+            <label>Payments due soon <span class="input-wrap"><span class="currency">$</span><input name="pending" type="number" min="0" step="0.01" value="5000" required></span></label>
+            <label>Must-keep reserve <span class="input-wrap"><span class="currency">$</span><input name="reserve" type="number" min="0" step="0.01" value="15000" required></span></label>
+            <label>Minimum balance comfort <span class="input-wrap"><span class="currency">$</span><input name="minBalance" type="number" min="0" step="0.01" value="15000" required></span></label>
+          </div>
+          <details class="optional-details"><summary>Personalize your recommendation</summary>
+            <div class="field-grid three detail-grid">
+              <label>How cautious are you?<select name="risk"><option value="conservative">Very cautious</option><option value="moderate" selected>Balanced</option><option value="aggressive">Comfortable with risk</option></select></label>
+              <label>Payment preference<select name="preference"><option value="ok_with_installments" selected>Installments are okay</option><option value="avoid_credit">Avoid credit</option><option value="pay_full_only">Pay in full only</option></select></label>
+              <label>Income pattern<select name="stability"><option value="fixed_salary" selected>Steady income</option><option value="variable">Variable income</option><option value="irregular">Irregular income</option></select></label>
+              <label class="range-label">Willingness to adjust flexible spending <span class="range-row"><input name="flexibility" type="range" min="0" max="100" value="50"><output id="flex-output">50%</output></span></label>
+              <label>Financial goal<select name="goal"><option value="">No specific goal</option><option value="no_debt">Avoid taking on debt</option><option value="saving_for_home">Saving for a home</option><option value="building_savings">Build my savings</option></select></label>
+              <label>Purchase priority<select name="priority"><option value="normal" selected>Normal</option><option value="high">High priority</option><option value="low">Low priority</option></select></label>
+            </div>
+          </details>
+        </section>
+
+        <section class="form-section purchase-section">
+          <div class="section-heading"><div><span class="section-kicker">WHAT ARE YOU CONSIDERING?</span><h2>Tell me about it</h2></div><span class="section-icon">✳</span></div>
+          <div class="field-grid purchase-grid">
+            <label>What would you like to buy?<input name="item" type="text" value="Laptop" placeholder="e.g. A new laptop" required></label>
+            <label>Price <span class="input-wrap"><span class="currency">$</span><input name="cost" type="number" min="0.01" step="0.01" value="45000" required></span></label>
+            <label>How important is it?<select name="category"><option value="discretionary">A nice-to-have</option><option value="semi_essential" selected>Useful / work-related</option><option value="essential">Essential</option></select></label>
+            <label>When do you need it?<select name="urgency"><option value="normal" selected>No rush</option><option value="can_defer">I can wait</option><option value="urgent">Urgent</option></select></label>
+          </div>
+          <details class="optional-details payment-details"><summary>Have a payment plan offer?</summary>
+            <div class="installment-row"><label class="check-control"><input id="installment-toggle" type="checkbox"><span>Installments offered</span></label><label>Number of payments<input name="months" id="months" type="number" min="1" max="60" value="6" disabled></label><label>Payment amount <span class="input-wrap"><span class="currency">$</span><input name="monthly" id="monthly" type="number" min="0.01" step="0.01" value="8000" disabled></span></label></div>
+          </details>
+          <details class="optional-details context-details"><summary>Add context from a message or bill image</summary>
+            <p class="help-copy">Include a note like “payday is delayed” or attach a statement/receipt. You can also use this to ask in your own words.</p>
+            <label>Your note<textarea name="message" rows="2" placeholder="e.g. My bonus is delayed until next month. Can I afford this laptop?"></textarea></label>
+            <label class="upload-zone" for="image-file"><span class="upload-icon">↑</span><span><strong>Choose a bill or message image</strong><small id="file-name">PNG, JPG, or WebP</small></span><input id="image-file" type="file" accept="image/png,image/jpeg,image/webp"></label>
+            <p class="key-note">Message and image analysis needs the app operator to configure an Anthropic API key.</p>
+          </details>
+          <button class="submit-button" id="submit-button" type="submit"><span>Check my affordability</span><span class="button-arrow">→</span></button>
+          <p class="disclaimer">A decision aid, not financial advice. Your inputs are sent to this app to calculate a forecast.</p>
+        </section>
+      </form>
+      <section id="result" class="result-card" aria-live="polite" hidden></section>
+      <div id="error" class="error-card" role="alert" hidden></div>
+    </section>
+    </section>
+    <section class="closing-note"><span class="closing-star">✳</span><p>A better money decision isn’t about saying no.<br>It’s about knowing what’s right <em>for you.</em></p><a href="#afford-form">Make your next move <span>↗</span></a></section>
+  </main>
+  <footer><span>dealix<span class="footer-dot">.</span></span><span>Clarity for the things that matter.</span><span>Private by design · A decision aid, not financial advice.</span></footer>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
