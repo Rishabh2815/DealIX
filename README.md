@@ -60,7 +60,7 @@ cd DealIX
 docker compose up --pull always --build -d
 ```
 
-Open https://navigation-boss-teachers-lock.trycloudflare.com/
+Open https://deal-4eoh2uwvh-rishabh2815.vercel.app/
 To stop the app:
 
 ```powershell
