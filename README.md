@@ -90,7 +90,7 @@ python -m pip install -e ".[test]"
 uvicorn dealix.api:app --reload --app-dir src
 ```
 
-The browser app is served at https://navigation-boss-teachers-lock.trycloudflare.com/. Run the test suite with:
+The browser app is served at https://deal-4eoh2uwvh-rishabh2815.vercel.app/. Run the test suite with:
 
 ```powershell
 python -m pytest
