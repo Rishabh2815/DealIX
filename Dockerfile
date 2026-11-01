@@ -14,5 +14,6 @@ FROM python:3.12-slim AS runtime
 ENV PATH="/opt/venv/bin:$PATH" PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
 WORKDIR /app
 COPY --from=builder /opt/venv /opt/venv
+COPY --from=builder /build/main.py ./main.py
 EXPOSE 8000
 CMD ["uvicorn", "dealix.api:app", "--host", "0.0.0.0", "--port", "8000"]
