@@ -8,7 +8,7 @@ const monthlyInput = document.querySelector('#monthly');
 const fileInput = document.querySelector('#image-file');
 const flexInput = document.querySelector('[name="flexibility"]');
 const flexOutput = document.querySelector('#flex-output');
-const money = new Intl.NumberFormat(undefined, { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+const money = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 2 });
 
 flexInput.addEventListener('input', () => { flexOutput.value = `${flexInput.value}%`; });
 installmentToggle.addEventListener('change', () => {
