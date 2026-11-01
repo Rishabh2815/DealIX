@@ -1,7 +1,12 @@
 from fastapi.testclient import TestClient
 from dealix.api import app
+from main import app as vercel_app
 
 client = TestClient(app)
+
+
+def test_vercel_entrypoint_exports_the_dealix_app():
+    assert vercel_app is app
 
 
 def payload():
